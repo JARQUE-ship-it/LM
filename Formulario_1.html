@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Completo</title>
+    
+        
+</head>
+<body>
+   
+        <h1>Formulario de Registro</h1>
+      <form id="registroForm" action="http://ncoge.com/phps/formulario.php" method="POST">
+         
+           
+                <label for="documento">Documento de Identidad <span class="required">*</span></label>
+                <input type="text" id="documento" name="documento" maxlength="9" required>       
+                <br/>
+                <br/>
+                <label for="apellido1">Primer Apellido <span class="required">*</span></label>
+                <input type="text" id="apellido1" name="apellido1" required>
+                  
+                <label for="apellido2">Segundo Apellido</label>
+                <input type="text" id="apellido2" name="apellido2">
+             
+                <label for="nombre">Nombre <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br/>
+                <br/>
+                <br/>
+
+                <label>Reclamación sobre el listado*(obligado elegir alguno)<span class="required"></span></label>
+                <br/>
+
+                        <input type="radio" id="provisional" name="listado" value="provicional" required>
+                        <label for="estudios1">PROVISIONAL</label>
+                        <br/>
+
+                        <input type="radio" id="definitivo" name="listado" value="definitivo" required>
+                        <label for="estudios2">DEFINITIVO</label>
+                        <br/>
+                        <br/>
+
+                <label>Finalidad de este escrito *(obligado elegir alguno)<span class="required"></span></label>
+                <br/>
+
+                        <input type="radio" id="solicitud1" name="solicitud" value="renuncia" required>
+                        <label for="estudios1">Renuncia a mi participación</label>
+                        <br/>
+
+                        <input type="radio" id="solicitud2" name="solicitud" value="subsanación" required>
+                        <label for="estudios2">Subsanar el error</label>
+                        <br/>
+                        <br/>
+
+                <label for="reclamación">Reclamación sobre</label>
+                <select id="reclamación" name="reclamación" required>
+                    <option value="puntos">Puntuación incorrecta</option>
+                    <option value="plaza">Plazas ofertadas</option>
+                    <option value="requisito">Requisistos solicitados</option>
+                    <option value="listado">listado publicado</option>
+                    <option value="otro">Otro motivo</option>
+                </select>
+                <br/>
+                <br/>
+                <label>Documentos que se solicita que se revisen (puedes seleccionar varios o ninguno)</label>
+                <br/>
+                   
+                        <input type="checkbox" id="documento1" name="Documentación aportada" value="DNI-NIF">
+                        <label for="documento1">Documento que acredita la identidad</label>
+                        <br/>
+                        
+                        <input type="checkbox" id="documento2" name="Documentación aportada" value="Requisito">
+                        <label for="documento2">Documento que acredita el requisito lingüístico</label>
+                        <br/>
+
+                        <input type="checkbox" id="documento3" name="Documentación aportada" value="Baremar">
+                        <label for="documento3">Documento a baremar</label>
+                        <br/>
+
+                        <input type="checkbox" id="documento4" name="Documentación aportada" value="Destino">
+                        <label for="documento4">Destino solicitado</label>
+                        <br/>
+                        <br/>
+           
+                
+                <label for="alegacion">Alegación </label>
+                <br/>
+                <textarea id="alegacion" name="alegacion" maxlength="300" rows="6" cols ="60"></textarea>
+                <br/>
+                <br/>
+                <br/>
+
+        <button type="submit" class="btn">Enviar Formulario</button>
+    </form>
+
+</body>
+</html>
