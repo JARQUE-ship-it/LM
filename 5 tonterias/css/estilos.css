@@ -1,0 +1,41 @@
+body {
+text-align:center;
+background-image: url("../images/fondo.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+}
+
+h1 {
+background-color: rgb(194, 206, 212);
+color: rgb(255, 255, 255);
+border-left-width: 332px;
+border-right-width: 320px;
+border-left-style: solid;
+border-right-style: solid;
+/*border-left-color: rgb(230, 20, 20);       No consigo poner rojo a la izquierda y que el fondo no sea blanco*/
+
+}
+
+img {
+height: 300px;
+/*width: 600px;            No se como centrar la lista, quería hacer más ancha la imagen y tampoco lo centra*/
+border: 5px rgb(10, 10, 10) solid;
+border-radius: 30px;
+box-shadow: 3px 3px 3px black;
+}
+
+ul {
+text-align: center;
+list-style-type: none;
+
+}
+
+li {
+display:inline;
+border: 2px rgb(2, 2, 2) solid;
+}
+
+a{
+color:rgb(21, 58, 139);
+}
