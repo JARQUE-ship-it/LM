@@ -1,0 +1,144 @@
+*{
+ 
+}
+
+body {
+/* Probando colores */
+background-color: #E5EDF1;
+}
+
+h1 {/* 1. El título superior tiene una linea de 5px negra. */
+    border-bottom: 5px solid black;
+    text-align: center;
+    margin: 20px 0;
+/* otro tono de color */
+    background-color: #96C2DB;
+}
+
+img {
+/* 2. la imagen debe aparecer alineada a la derecha. */ 
+    float: right;
+/* 3. Tiene un separación a la derecha de 60 pixels. */
+    margin-right: 60px;
+
+/* Marco negro alrededor de la imagen PORQUE LO TIENE LA SOLUCIÓN*/
+    border: 4px solid black;
+
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+p {
+  
+}
+
+#header {
+  
+}
+
+#content{
+  
+}
+
+#text {
+    width: 90%;
+    margin: 0 auto;
+    clear: both;
+}
+
+#text p {
+/* 5. Los tres párrafos arrojan sombras. */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+/* 9. Los Párrafos tienen una sangría de 40 px en la primera línea. */
+    text-indent: 40px;
+/* 10.Los tres párrafos rellenan el 90% de la ventana. */
+    width: 90vw;
+/* 11.Los párrafos no rellenan completamente la caja asignada, deben estar separados 10px. */
+    margin-bottom: 10px;  
+
+/* el marco discontinuo */
+    border: 3px dashed black;
+/* fondo igaul que h1 */
+ background-color: #96C2DB;
+    
+}
+
+#text p:first-child { 
+/*  4. Las esquinas del primer párrafo aparecen redondeadas solo en la parte superior 30px. */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+/* 12.El primer párrafo tiene un fondo que se repite. */
+    background-image: url('../images/fondoParrafo.png');
+    background-repeat: repeat;
+
+}
+
+#text p:last-child {
+/* 8. Las esquinas del último párrafo aparecen redondeadas solo en la parte inferior 30px. */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+
+#menu {
+/* era aqui para centrar los enlaces */
+    text-align: center;
+}
+
+#menu a{
+
+
+}
+
+
+#menu li{
+/* 7. A la izquierda de cada opción de menú aparece una linea roja de 5px */
+    border-left: 5px solid red;
+    padding-left: 10px;
+    list-style: none;
+/* Los enlaces deben aparcer en línea y centrados, necesito esto */
+    display: inline-block;
+    align: center;   /* No hace nada */
+}
+
+#menu li a:hover{
+/* 14. Al pasar el puntero del ratón encima de los enlaces del menú estos aparecerán subrayados en rojo. */
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+#footer{
+/*  6. El pie de la página tiene una línea superior de 5px negra. */ 
+    border-top: 5px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: #42709c;  /* prueba este azul intenso */
+    color: #fff; 
+}
+
+#footer a{
+    /* poner el texto del enlace del mismo color que el texto del pie de página */
+color: #fff; 
+}
+
+#footer a:hover{
+
+#image {
+
+}
+
+@media all and (max-width: 500px) {
+#image {
+        border: 2px solid red;
+        width: 90%;
+        display: block;
+        margin: 0 auto;   
+        float: none;
+    }
+}
