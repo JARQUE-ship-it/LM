@@ -80,7 +80,7 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-#textCookie {
+.text-cookie {
     margin-bottom: 1.5rem;
 }
 
@@ -199,13 +199,14 @@ a:hover {
     padding: 3rem 2rem;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         padding: 1rem;
         gap: 1.5rem;
     }
-    
+
     .submenu {
         flex-direction: row;
         justify-content: center;
@@ -214,26 +215,26 @@ a:hover {
         margin: 2rem 0;
         flex-wrap: wrap;
     }
-    
+
     .submenu ul {
         flex-direction: row;
         gap: 1rem;
     }
-    
+
     .submenu span {
         font-size: 0.65rem;
     }
-    
+
     .articulo {
         flex-direction: column !important;
         height: 400px;
     }
-    
+
     .articulo img {
         width: 100%;
         height: 250px;
     }
-    
+
     .cookies {
         position: relative;
         top: auto;
