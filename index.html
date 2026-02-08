@@ -1,7 +1,3 @@
-¡Claro! Puedes añadir un botón que active la animación de la barra: sube progresivamente hasta el 80% y luego baja al doble de velocidad hasta cero. Aquí tienes el HTML completo modificado con el botón y el JavaScript actualizado.
-​
-
-xml
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -211,16 +207,18 @@ xml
             
             <div class="bloque">
                 <h2>NOTAS EVALUACIÓN</h2>
-                <p>1ª Evaluación:</p><span>Un muy bien puntuado 3</span>
+                <p>1ª Evaluación:</p>
+                <p>Un merecido 3</p>
+                <br>    
                 <p>Ud.1. --> 7'86</p>
                 <p>Ud.2.1. --> 9</p>
-                <p>Ud.2.2. --> 5 (por lástima)</p>
-                <p>Ud.2.3. --> 8</p>
+                <p>Ud2.2. --> 5 (por lástima)</p>
+                <p>Ud2.3. --> 8</p>
                 <p>Ud.3.1. --> 9 (desconozco el motivo de los errores)</p>
                 <p>Ud.3.2. --> 7</p>
                 <p>Ud 4.1. --> 10 (lo agradezco, aunque no lo merezco, buen empujón motivacional)</p>
                 <p>Ud.5.1. --> 0 No presentado a tiempo</p>
-                <p>Ud.5.2. --> </p>
+                <p> Ud.5.2. --> </p>
                 <p>Ud.6.1. --></p>
             </div>
             
@@ -316,21 +314,3 @@ xml
     </script>
 </body>
 </html>
-Cambios realizados
-Añadí un botón estilizado en el bloque "PROGRESO" con el texto exacto que pediste.
-​
-
-Cómo funciona la animación
-El JavaScript usa setInterval para simular progreso: sube 1% cada 20ms hasta 80% (total ~1.6s), luego baja 1% cada 10ms (0.8s, doble velocidad).
-
-Botón se deshabilita durante la animación y muestra "Animando...".
-
-Quita la animación CSS @keyframes y usa transition para control preciso desde JS.
-
-Responsive y hover effects en el botón para mejor UX.
-​
-
-Prueba y ajustes
-Guarda como HTML, abre en navegador y haz click. Si quieres cambiar velocidades, modifica velocidadSubida (ej: 30ms más lento). ¡Perfecto para tu portafolio DAW!
-
-
