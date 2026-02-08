@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajos de JARQUE</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
             background-image: url('images/fondo_trabajos.jpg');
             background-size: cover;
             background-position: center;
@@ -17,53 +20,185 @@
             background-attachment: fixed;
             min-height: 100vh;
             color: white;
+            display: flex;
+            min-height: 100vh;
         }
+
+        .container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* IZQUIERDA - 1/3 (3 bloques) */
+        .sidebar {
+            width: 33.33%;
+            background: rgba(44, 62, 80, 0.95);
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .bloque {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .bloque h2 {
+            color: #f1c40f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 0.5rem;
+        }
+
+        /* DERECHA - 2/3 (lista trabajos) */
+        .content {
+            width: 66.66%;
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         h1 {
             color: rgb(12, 12, 12);
             text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+
         ul {
             list-style: none;
             padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
         }
+
         li {
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            background-color: rgba(255, 255, 255, 0.1);
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
         }
+
+        li:hover {
+            transform: translateY(-3px);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
         a {
             text-decoration: none;
             color: #3907eb;
-            font-size: 18px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
         }
+
         a:hover {
             color: #250fec;
         }
+
         a:visited {
             color: rgb(245, 94, 7); 
+        }
+
+        /* BARRA PROGRESO ANIMADA */
+        .barra {
+            width: 100%;
+            height: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .progreso {
+            height: 100%;
+            background: linear-gradient(90deg, #f1c40f, #f39c12);
+            border-radius: 10px;
+            width: 0%;
+            animation: cargar 2s ease-in-out;
+        }
+
+        @keyframes cargar {
+            0% { width: 0%; }
+            100% { width: var(--valor); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .content {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Trabajos realizados en la asignatura <br> 
-        LENGUAJE DE MARCAS</h1>
-    <ul>
-        <li><a href="Curriculum.ud02.html">Curriculum (Tema 2)</a></li>
-        <li><a href="Curriculum.ud03con_VS.html">Curriculum (Tema 3)</a></li>
-        <li><a href="Curriculum_ud03_mejorado.html">Curriculum mejorado (Tema 3)</a></li>
-        <li><a href="Formulario_1.html">Formulario_sencillo</a></li>
-        <li><a href="5%20tonterias/index.html">5 Tonterias</a></li>
-        <li><a href="practica2/index.html">Practica 2 CSS</li>
-        <li><a href="Ej4/index.html">Tema 7: HTML5 y formularios</a></li>
-        <li><a href="practica5.1/index.html">Tema 8: Practicas FLOAT</a></li>
-         <li><a href="practica5.2/index.html">Tema 9: FLEXBOX, solo cambiar el CSS</a></li>
-         <li><a href="FLEX/index.html">Tema 9: Practicando el FLEXBOX. Jamás sabré hacer esto sin ayuda</a></li>
-    </ul>
-</body>
+    <div class="container">
+        <!-- IZQUIERDA: 3 BLOQUES -->
+        <aside class="sidebar">
+            <div class="bloque">
+                <h2>DATOS PERSONALES</h2>
+                <p>José Luis Jarque Acedo</p>
+                <p>Estudiante 1ºDAW</p>
+                <p>PERSEVERANDO (sin demasiado éxito)</p>
+            </div>
+            
+            <div class="bloque">
+                <h2>NOTAS EVALUACIÓN</h2>
+                <p>YA LO AÑADIRÉ</p>
+            </div>
+            
+            <div class="bloque">
+                <h2>PROGRESO</h2>
+                <p>Barra de aprendizaje</p>
+                <p>(cuando parece que sí, resulta que no)</p>
+                <div class="barra">
+                    <div class="progreso" style="--valor: 67%;"></div>
+                </div>
+            </div>
+        </aside>
 
+        <!-- DERECHA: LISTA TRABAJOS -->
+        <main class="content">
+            <h1>Trabajos realizados en la asignatura<br>LENGUAJE DE MARCAS</h1>
+            <ul>
+                <li><a href="Curriculum.ud02.html">Curriculum (Tema 2)</a></li>
+                <li><a href="Curriculum.ud03con_VS.html">Curriculum (Tema 3)</a></li>
+                <li><a href="Curriculum_ud03_mejorado.html">Curriculum mejorado (Tema 3)</a></li>
+                <li><a href="Formulario_1.html">Formulario_sencillo</a></li>
+                <li><a href="5%20tonterias/index.html">5 Tonterias</a></li>
+                <li><a href="practica2/index.html">Practica 2 CSS</a></li>
+                <li><a href="Ej4/index.html">Tema 7: HTML5 y formularios</a></li>
+                <li><a href="practica5.1/index.html">Tema 8: Practicas FLOAT</a></li>
+                <li><a href="practica5.2/index.html">Tema 9: FLEXBOX, solo cambiar el CSS</a></li>
+                <li><a href="FLEX/index.html">Tema 9: Practicando el FLEXBOX</a></li>
+            </ul>
+        </main>
+    </div>
+
+    <script>
+        // BARRA PROGRESO ALEATORIA AL RECARGAR
+        window.addEventListener('load', function() {
+            const progreso = document.querySelector('.progreso');
+            const valorAleatorio = Math.floor(Math.random() * 71) + 10; // 10-80%
+            progreso.style.setProperty('--valor', valorAleatorio + '%');
+        });
+    </script>
+</body>
 </html>
+
 
 
 
