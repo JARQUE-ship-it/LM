@@ -10,10 +10,10 @@
     <div class="page-wrapper">
         <nav class="menu">
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Pizzas</a></li>
-                <li><a href="">Tartas</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="#tartas">Tartas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
 
@@ -22,50 +22,49 @@
             <p>Las mejores pizzas y tartas en un radio de 1m2</p>
         </header>
 
-        <section class="cookies">
+        <section id="cookieEU" class="cookies">
             <h2>Cookies EU</h2>
-            <div class="text-cookie">
-                <p>Usamos cookies porque somos una pastelería</p>
-                <p> AH! y para mejorar tu experiencia (quedarnos tus datos). Al continuar aceptas su uso.</p>
-                <a class="button" href="#" onclick="document.querySelector('.cookies').style.display='none'">Aceptar</a>
+            <div id="textCookie">
+                <p>Usamos cookies porque somos una pastelería<p>
+                <p>y para mejorar tu experiencia. Al continuar aceptas su uso.</p>
+                <a class="button" href="#" onclick="document.getElementById('cookieEU').style.display='none'">Aceptar</a>
             </div>
         </section>
 
         <div class="container">
             <main class="main">
-                <article class="uno">
+                <article class="articulo uno" id="pizzas">
                     <img src="img/pizza1.webp" alt="Pizza 1">
                     <div>
                         <h2>Pizza Vomitiva</h2>
                         <p>Masa madre artesanal con tomate del mercadona, mozzarella y 2 o 3 microrodajas de peperoni de las sobras de la cesta de navidad.</p>
                     </div>
                 </article>
-                <article class="dos">
+                <article class="articulo dos">
                     <img src="img/pizza2.webp" alt="Pizza 2">
                     <div>
                         <h2>Pizza medio Queso</h2>
                         <p>Tranchete requemado con tomate cherry del bueno y unas hojas que ha traido el viento.</p>
                     </div>
                 </article>
-                <article class="tres">
+                <article class="articulo tres">
                     <img src="img/tarta1.webp" alt="Tarta 1">
                     <div>
                         <h2>Tarta Fresas</h2>
                         <p>Fresas compradas a última hora en el paquistaní con crema mascarpone para enmascarar.</p>
                     </div>
                 </article>
-                <article class="cuatro">
+                <article class="articulo cuatro">
                     <img src="img/tarta2.webp" alt="Tarta 2">
                     <div>
                         <h2>Tarta Chocolate</h2>
-                        <p>Chocolate "belga" puro con base crujiente (en un principio era bizcocho).</p>
+                        <p>Chocolate "belga" puro con base crujiente.</p>
                     </div>
                 </article>
             </main>
-
             <aside class="submenu">
                 <ul>
-                    <li><a href="#"><img src="img/x.png" alt="X"><span>X EL NUEVO TWITER</span></a></li>
+                    <li><a href="#"><img src="img/x.png" alt="X"><span>EL NUEVO TWITER</span></a></li>
                     <li><a href="#"><img src="img/facebook.png" alt="Facebook"><span>PARA BOOMERS</span></a></li>
                     <li><a href="#"><img src="img/twitter.png" alt="Twitter"><span>YA NO EXISTE</span></a></li>
                     <li><a href="#"><img src="img/google_plus.png" alt="Google+"><span>GOOGLE+</span></a></li>
@@ -76,13 +75,9 @@
             </aside>
         </div>
 
-        <footer class="footer contacto">
+        <footer id="contacto" class="footer">
             <p>Pizza&Tarta=Grasaza · C/ Juan de Garay, INSTITUTO · 987 123 456 · pizzatarta@pizzatarta.com</p>
         </footer>
     </div>
 </body>
 </html>
-
-
-
-
