@@ -55,28 +55,53 @@
             padding-bottom: 0.5rem;
         }
 
-        /* DERECHA - 2/3 (lista trabajos) */
+        /* DERECHA - 2/3 (DOS CONTENEDORES HORIZONTALES) */
         .content {
             width: 66.66%;
-            padding: 4rem 3rem;
+            padding: 2rem 1.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+        }
+
+        .header-title {
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
         h1 {
             color: rgb(12, 12, 12);
-            text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 2rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* CONTENEDORES HORIZONTALES */
+        .listas-container {
+            display: flex;
+            gap: 2rem;
+            flex: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .lista-contenedor {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lista-contenedor h3 {
+            color: #f1c40f;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 0.5rem;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            max-width: 800px;
-            margin: 0 auto;
+            flex: 1;
         }
 
         li {
@@ -97,7 +122,7 @@
         a {
             text-decoration: none;
             color: #3907eb;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             display: block;
         }
@@ -141,6 +166,10 @@
             .sidebar, .content {
                 width: 100%;
             }
+            .listas-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -170,21 +199,37 @@
             </div>
         </aside>
 
-        <!-- DERECHA: LISTA TRABAJOS -->
+        <!-- DERECHA: DOS LISTAS HORIZONTALES -->
         <main class="content">
-            <h1>Trabajos realizados en la asignatura<br>LENGUAJE DE MARCAS</h1>
-            <ul>
-                <li><a href="Curriculum.ud02.html">Curriculum (Tema 2)</a></li>
-                <li><a href="Curriculum.ud03con_VS.html">Curriculum (Tema 3)</a></li>
-                <li><a href="Curriculum_ud03_mejorado.html">Curriculum mejorado (Tema 3)</a></li>
-                <li><a href="Formulario_1.html">Formulario_sencillo</a></li>
-                <li><a href="5%20tonterias/index.html">5 Tonterias</a></li>
-                <li><a href="practica2/index.html">Practica 2 CSS</a></li>
-                <li><a href="Ej4/index.html">Tema 7: HTML5 y formularios</a></li>
-                <li><a href="practica5.1/index.html">Tema 8: Practicas FLOAT</a></li>
-                <li><a href="practica5.2/index.html">Tema 9: FLEXBOX, solo cambiar el CSS</a></li>
-                <li><a href="FLEX/index.html">Tema 9: Practicando el FLEXBOX</a></li>
-            </ul>
+            <div class="header-title">
+                <h1>Trabajos realizados en la asignatura<br>LENGUAJE DE MARCAS</h1>
+            </div>
+            
+            <div class="listas-container">
+                <!-- CONTENEDOR IZQUIERDO -->
+                <div class="lista-contenedor">
+                    <h3>PRIMER BLOQUE</h3>
+                    <ul>
+                        <li><a href="Curriculum.ud02.html">Curriculum (Tema 2)</a></li>
+                        <li><a href="Curriculum.ud03con_VS.html">Curriculum (Tema 3)</a></li>
+                        <li><a href="Curriculum_ud03_mejorado.html">Curriculum mejorado (Tema 3)</a></li>
+                        <li><a href="Formulario_1.html">Formulario_sencillo</a></li>
+                        <li><a href="5%20tonterias/index.html">5 Tonterias</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTENEDOR DERECHO -->
+                <div class="lista-contenedor">
+                    <h3>SEGUNDO BLOQUE</h3>
+                    <ul>
+                        <li><a href="practica2/index.html">Practica 2 CSS</a></li>
+                        <li><a href="Ej4/index.html">Tema 7: HTML5 y formularios</a></li>
+                        <li><a href="practica5.1/index.html">Tema 8: Practicas FLOAT</a></li>
+                        <li><a href="practica5.2/index.html">Tema 9: FLEXBOX, solo cambiar el CSS</a></li>
+                        <li><a href="FLEX/index.html">Tema 9: Practicando el FLEXBOX</a></li>
+                    </ul>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -198,17 +243,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
