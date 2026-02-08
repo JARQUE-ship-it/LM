@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, sans-serif;
     background: url(img/fondo.webp);
@@ -13,12 +14,14 @@ body {
     min-height: 100vh;
 }
 
+
 .page-wrapper {
     margin-top: 80px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 
 .menu {
     position: fixed;
@@ -29,6 +32,7 @@ body {
     z-index: 1000;
 }
 
+
 .menu ul {
     display: flex;
     justify-content: center;
@@ -37,6 +41,7 @@ body {
     padding: 1rem;
 }
 
+
 .menu a {
     color: white;
     text-decoration: none;
@@ -44,9 +49,11 @@ body {
     font-size: 1.1rem;
 }
 
+
 a:hover {
     text-decoration: underline;
 }
+
 
 .header {
     text-align: center;
@@ -56,10 +63,12 @@ a:hover {
     background: rgba(139,69,19,0.3);
 }
 
+
 .header h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
 }
+
 
 .cookies {
     position: fixed;
@@ -75,14 +84,17 @@ a:hover {
     z-index: 999;
 }
 
+
 .cookies h2 {
     color: #d63031;
     margin-bottom: 1rem;
 }
 
+
 .text-cookie {
     margin-bottom: 1.5rem;
 }
+
 
 .button {
     background: linear-gradient(45deg, #d63031, #ff6b35);
@@ -94,6 +106,7 @@ a:hover {
     display: inline-block;
 }
 
+
 .container {
     flex: 1;
     display: flex;
@@ -103,12 +116,14 @@ a:hover {
     gap: 3rem;
 }
 
+
 .main {
     flex: 2;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
+
 
 .articulo {
     display: flex;
@@ -119,19 +134,33 @@ a:hover {
     overflow: hidden;
 }
 
-.uno, .tres {
+
+.uno {
     flex-direction: row;
 }
 
-.dos, .cuatro {
+
+.dos {
     flex-direction: row-reverse;
 }
+
+
+.tres {
+    flex-direction: row;
+}
+
+
+.cuatro {
+flex-direction: row-reverse;
+}
+
 
 .articulo img {
     width: 40%;
     height: 100%;
     object-fit: cover;
 }
+
 
 .articulo div {
     flex: 1;
@@ -141,11 +170,13 @@ a:hover {
     justify-content: center;
 }
 
+
 .articulo h2 {
     font-size: 1.8rem;
     color: #d63031;
     margin-bottom: 1rem;
 }
+
 
 .submenu {
     width: 100px;
@@ -161,12 +192,14 @@ a:hover {
     align-self: flex-start;
 }
 
+
 .submenu ul {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     list-style: none;
 }
+
 
 .submenu a {
     display: flex;
@@ -175,6 +208,7 @@ a:hover {
     text-decoration: none;
     color: white;
 }
+
 
 .submenu img {
     width: 45px;
@@ -191,6 +225,7 @@ a:hover {
     letter-spacing: 1px;
 }
 
+
 .footer {
     flex-shrink: 0;
     background: rgba(0,0,0,0.95);
@@ -198,6 +233,7 @@ a:hover {
     text-align: center;
     padding: 3rem 2rem;
 }
+
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -207,6 +243,7 @@ a:hover {
         gap: 1.5rem;
     }
 
+    
     .submenu {
         flex-direction: row;
         justify-content: center;
@@ -216,25 +253,30 @@ a:hover {
         flex-wrap: wrap;
     }
 
+    
     .submenu ul {
         flex-direction: row;
         gap: 1rem;
     }
 
+    
     .submenu span {
         font-size: 0.65rem;
     }
 
+    
     .articulo {
         flex-direction: column !important;
         height: 400px;
     }
 
+    
     .articulo img {
         width: 100%;
         height: 250px;
     }
 
+    
     .cookies {
         position: relative;
         top: auto;
@@ -243,4 +285,7 @@ a:hover {
         margin: 2rem auto;
         max-width: 95%;
     }
+
+    
 }
+
