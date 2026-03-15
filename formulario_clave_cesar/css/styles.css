@@ -1,0 +1,19 @@
+* {
+background-color: yellow;
+}
+
+h1 {
+    font-size: 3em;
+    color:blue;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+p {
+
+    color: black;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
