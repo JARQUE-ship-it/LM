@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio simple</title>
+</head>
+<body>
+    <style>
+        ul{
+            padding: 0;
+            margin: 20px auto;
+        }
+
+        li{
+            list-style: none; 
+            float: left;
+            width: 17%; 
+            margin: 5px;
+            padding: 8px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: rgb(100, 128, 157);
+            border: 2px solid rgb(237, 7, 7);
+            border-radius: 5px;
+          
+        }
+    </style>
+    <h1>Conversor de divisas</h1>
+    <h2>con https://frankfurter.dev/</h2>
+    Cantidad: <input type="number" id="cantidad" value="1">
+    <br> <input type="button" value="Convertir" id="convertir">
+    <div id="resultado"></div>
+    <script>
+        let moneda="EUR"
+        //let moneda="USD"
+        let url=`https://api.frankfurter.dev/v1/latest?base=${moneda}`
+        let cantidad=document.getElementById("cantidad")
+        let convertirBtn=document.getElementById("convertir")
+        let resultado=document.getElementById("resultado")
+
+
+        //funciones
+        /*
+            Devuelve un li con los datos de la moneda
+                */
+        function creaElemento(valor, clave) {            
+            let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
+
+            let liElement = document.createElement("li")
+            liElement.textContent = `${cantidad.value} ${moneda} ===>> ${total} ${clave}`
+
+            return liElement
+        }
+
+
+        
+        /*
+            Obtiene los cambios y los pinta en pantalla 
+        */
+        async function convertir(){        
+            //resultado.innerHTML=`1 ${moneda} = ${datos["rates"][moneda]} USD`
+            fetch(url)
+                .then(response => response.json())
+                .then(datos => {
+                    // haz cosas con los datos        
+                    console.log(datos);
+                    let cambios=Object.entries(datos.rates)                    
+                    let ulElement = document.createElement("ul")
+
+                    cambios.forEach(([clave, valor]) => {
+                        console.log(clave, valor);
+
+                        ulElement.appendChild(creaElemento(valor, clave))
+
+                    });
+                    
+                    resultado.appendChild(ulElement)
+                })
+                .catch(error => console.log(error));                        
+        }
+        //eventos
+        convertirBtn.addEventListener("click", function(){
+            resultado.innerHTML=""
+            convertir()
+        })
+
+
+
+    </script>
+</body>
+</html>
